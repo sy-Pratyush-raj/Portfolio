@@ -1,45 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pratyush Raj | Portfolio</title>
+
 <link rel="stylesheet" href="style.css">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-<header>
-<h1>Pratyush Raj</h1>
-<p>CSE Student | Developer | Problem Solver</p>
-<a href="#projects" class="btn">View Projects</a>
-</header>
+<!-- Navbar -->
 
-<section class="about">
+<nav>
+<h2 class="logo">Pratyush</h2>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+
+<!-- Hero Section -->
+
+<section class="hero">
+
+<h1>Hi, I'm <span>Pratyush Raj</span></h1>
+
+<p id="typing"></p>
+
+<a href="#projects" class="btn">View Projects</a>
+
+</section>
+
+
+<!-- About -->
+
+<section id="about">
+
 <h2>About Me</h2>
+
 <p>
 I am a Computer Science student passionate about coding,
 Data Structures, and building real-world projects.
 </p>
+
 </section>
 
-<section class="skills">
+
+<!-- Skills -->
+
+<section id="skills">
+
 <h2>Skills</h2>
 
-<div class="skill-box">
-<span>C++</span>
-<span>JavaScript</span>
-<span>HTML</span>
-<span>CSS</span>
-<span>DSA</span>
-<span>Git & GitHub</span>
+<div class="skill-container">
+
+<div class="skill">C++</div>
+<div class="skill">JavaScript</div>
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">DSA</div>
+<div class="skill">Git & GitHub</div>
+
 </div>
 
 </section>
 
+
+<!-- Projects -->
+
 <section id="projects">
+
 <h2>Projects</h2>
 
-<div class="projects">
+<div class="project-container">
 
 <div class="card">
 <h3>AI Stress Level Tracker</h3>
@@ -48,27 +92,40 @@ Data Structures, and building real-world projects.
 
 <div class="card">
 <h3>Rock Paper Scissors Game</h3>
-<p>Interactive web game using JavaScript.</p>
+<p>Interactive browser game built using JavaScript.</p>
 </div>
 
 </div>
 
 </section>
 
-<section class="contact">
+
+<!-- Contact -->
+
+<section id="contact">
+
 <h2>Contact</h2>
 
 <p>Email: rockpratyushraj@gmail.com</p>
 
+<div class="links">
+
 <a href="https://github.com/sy-Pratyush-raj">GitHub</a>
 
-<a href="https://linkedin.com">LinkedIn</a>
+<a href="#">LinkedIn</a>
+
+</div>
 
 </section>
 
+
 <footer>
+
 <p>© 2026 Pratyush Raj</p>
+
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
