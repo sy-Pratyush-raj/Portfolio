@@ -1,14 +1,20 @@
-console.log("Portfolio Website Loaded");
+const text = "CSE Student | Developer | Problem Solver";
 
-document.querySelectorAll("nav a").forEach(link => {
-link.addEventListener("click", function(e){
-e.preventDefault();
+let index = 0;
 
-const target = document.querySelector(this.getAttribute("href"));
+function type(){
 
-window.scrollTo({
-top: target.offsetTop - 50,
-behavior: "smooth"
-});
-});
-});
+document.getElementById("typing").innerHTML =
+text.slice(0,index);
+
+index++;
+
+if(index > text.length){
+index = 0;
+}
+
+setTimeout(type,120);
+
+}
+
+type();
