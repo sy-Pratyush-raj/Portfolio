@@ -3,9 +3,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Download, Sparkles } from "lucide-react";
+import { ArrowRight, Download, Github, Linkedin, Mail, Sparkles } from "lucide-react";
 
-import { heroHighlights } from "@/lib/data";
+import { contactLinks, heroHighlights } from "@/lib/data";
+
+const socialIcons = {
+  GitHub: Github,
+  LinkedIn: Linkedin,
+  Email: Mail
+} as const;
 
 export function HeroSection() {
   return (
@@ -28,8 +34,11 @@ export function HeroSection() {
             transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             className="space-y-6"
           >
+            <p className="text-sm font-medium uppercase tracking-[0.28em] text-[var(--accent)]">
+              Pratyush Raj
+            </p>
             <h1 className="max-w-4xl font-[family-name:var(--font-heading)] text-5xl font-semibold leading-[1.02] text-white md:text-7xl">
-              Designing and building <span className="text-[var(--accent)]">modern digital products</span> with clean frontend systems.
+              Hi, I&apos;m Pratyush Raj. I design and build <span className="text-[var(--accent)]">modern digital products</span> with clean frontend systems.
             </h1>
             <p className="max-w-2xl text-base leading-8 text-[var(--muted)] md:text-lg">
               I&apos;m Pratyush Raj, a developer focused on elegant interfaces, scalable frontend architecture, and problem solving through code.
@@ -53,9 +62,37 @@ export function HeroSection() {
               href="/resume"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-3.5 text-white transition hover:border-white/20 hover:bg-white/10"
             >
-              Digital Resume
+              View Resume
               <Download size={18} />
             </Link>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+            className="flex flex-wrap items-center gap-3"
+          >
+            {contactLinks.map((link) => {
+              const Icon = socialIcons[link.label as keyof typeof socialIcons];
+
+              if (!Icon) {
+                return null;
+              }
+
+              return (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  target={link.href.startsWith("http") ? "_blank" : undefined}
+                  rel={link.href.startsWith("http") ? "noreferrer" : undefined}
+                  className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-[var(--muted)] transition hover:border-white/20 hover:bg-white/10 hover:text-white"
+                >
+                  <Icon size={16} />
+                  {link.label}
+                </Link>
+              );
+            })}
           </motion.div>
 
           <motion.div

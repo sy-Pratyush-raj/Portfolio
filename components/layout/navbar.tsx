@@ -63,12 +63,6 @@ export function Navbar() {
               {item.label}
             </Link>
           ))}
-          <Link
-            href="/resume"
-            className="rounded-full bg-[var(--accent)] px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-[var(--accent-strong)]"
-          >
-            Resume
-          </Link>
         </nav>
 
         <button
@@ -101,13 +95,6 @@ export function Navbar() {
                   {item.label}
                 </Link>
               ))}
-              <Link
-                href="/resume"
-                className="rounded-2xl bg-[var(--accent)] px-4 py-3 text-sm font-semibold text-slate-950"
-                onClick={() => setOpen(false)}
-              >
-                Digital Resume
-              </Link>
             </div>
           </motion.div>
         ) : null}
