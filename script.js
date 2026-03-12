@@ -1,16 +1,38 @@
-const text = "CSE Student | Developer | Problem Solver";
+const text = [
+"CLOUD Engineer",
+"DSA Enthusiast",
+"Problem Solver"
+];
 
-let index = 0;
+let i = 0;
+let j = 0;
+let currentText = "";
+let isDeleting = false;
 
 function type(){
 
+currentText = text[i];
+
+if(!isDeleting){
 document.getElementById("typing").innerHTML =
-text.slice(0,index);
+currentText.substring(0,j++);
+}else{
+document.getElementById("typing").innerHTML =
+currentText.substring(0,j--);
+}
 
-index++;
+if(j == currentText.length+1){
+isDeleting = true;
+setTimeout(type,1000);
+return;
+}
 
-if(index > text.length){
-index = 0;
+if(j == 0){
+isDeleting = false;
+i++;
+if(i == text.length){
+i = 0;
+}
 }
 
 setTimeout(type,120);
@@ -18,3 +40,5 @@ setTimeout(type,120);
 }
 
 type();
+
+AOS.init();
