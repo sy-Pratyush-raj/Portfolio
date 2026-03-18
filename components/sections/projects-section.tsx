@@ -1,7 +1,7 @@
 import { ProjectCard } from "@/components/cards/project-card";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { projects } from "@/lib/data";
+import { projects, projectsSection } from "@/lib/data";
 
 export function ProjectsSection() {
   return (
@@ -9,14 +9,14 @@ export function ProjectsSection() {
       <div className="container-shell">
         <Reveal>
           <SectionHeading
-            eyebrow="Projects"
-            title="Projects presented like case studies, not just screenshots."
-            description="Each project highlights problem context, implementation approach, and frontend quality standards."
+            eyebrow={projectsSection.eyebrow}
+            title={projectsSection.title}
+            description={projectsSection.description}
           />
         </Reveal>
         <div className="section-grid lg:grid-cols-3">
           {projects.map((project, index) => (
-            <Reveal key={project.title} delay={index * 0.08}>
+            <Reveal key={project.title} delay={index * 0.08} className="h-full">
               <ProjectCard {...project} />
             </Reveal>
           ))}

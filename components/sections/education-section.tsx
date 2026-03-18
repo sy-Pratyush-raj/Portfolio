@@ -1,6 +1,6 @@
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { education } from "@/lib/data";
+import { education, educationSection } from "@/lib/data";
 
 export function EducationSection() {
   return (
@@ -8,9 +8,9 @@ export function EducationSection() {
       <div className="container-shell">
         <Reveal>
           <SectionHeading
-            eyebrow="Education"
-            title="Academic foundation and technical progression."
-            description="A concise timeline of the coursework and fundamentals that support current project work."
+            eyebrow={educationSection.eyebrow}
+            title={educationSection.title}
+            description={educationSection.description}
           />
         </Reveal>
         <div className="section-grid md:grid-cols-2">

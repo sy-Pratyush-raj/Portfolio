@@ -1,6 +1,6 @@
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { certifications } from "@/lib/data";
+import { certifications, certificationsSection } from "@/lib/data";
 
 export function CertificationsSection() {
   return (
@@ -8,9 +8,9 @@ export function CertificationsSection() {
       <div className="container-shell">
         <Reveal>
           <SectionHeading
-            eyebrow="Certifications"
-            title="Learning credentials and structured growth."
-            description="Formal learning that supports better engineering decisions, delivery workflows, and production readiness."
+            eyebrow={certificationsSection.eyebrow}
+            title={certificationsSection.title}
+            description={certificationsSection.description}
           />
         </Reveal>
 

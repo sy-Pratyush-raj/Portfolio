@@ -1,0 +1,26 @@
+{
+  "sectionHeading": {
+    "eyebrow": "About",
+    "title": "",
+    "description": "I design scalable infrastructure, automate workflows, and deliver performant applications with clean architecture."
+  },
+  "aboutCard": {
+    "tag": "About me",
+    "title": "Cloud engineer with DevOps mindset",
+    "description": "Focused on building scalable cloud systems with automation, security, and performance in mind. I turn complex infrastructure into simple, reliable deployments. I enjoy designing end-to-end workflows from local development to production, including containerization, CI/CD pipelines, observability, and deployment hardening. My goal is to ship systems that are easy to maintain, cost-aware, and resilient under real usage."
+  },
+  "techStack": [
+    "AWS",
+    "Docker",
+    "Kubernetes",
+    "Terraform",
+    "CI/CD",
+    "Linux",
+    "Nginx",
+    "GitHub Actions"
+  ],
+  "stats": [
+    { "label": "Stack", "value": "AWS & Azure" },
+    { "label": "Focus", "value": "Cloud & DevOps" }
+  ]
+}

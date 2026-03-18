@@ -1,7 +1,7 @@
 import { AchievementCard } from "@/components/cards/achievement-card";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { achievements } from "@/lib/data";
+import { achievements, achievementsSection } from "@/lib/data";
 
 export function AchievementsSection() {
   return (
@@ -9,9 +9,9 @@ export function AchievementsSection() {
       <div className="container-shell">
         <Reveal>
           <SectionHeading
-            eyebrow="Achievements"
-            title="Milestones that reflect consistency and execution."
-            description="These outcomes highlight discipline, technical depth, and the ability to sustain long-term progress."
+            eyebrow={achievementsSection.eyebrow}
+            title={achievementsSection.title}
+            description={achievementsSection.description}
           />
         </Reveal>
 

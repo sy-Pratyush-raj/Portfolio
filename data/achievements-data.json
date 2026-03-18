@@ -1,0 +1,21 @@
+{
+  "sectionHeading": {
+    "eyebrow": "Achievements",
+    "title": "Milestones that reflect consistency and execution.",
+    "description": "These outcomes highlight discipline, technical depth, and the ability to sustain long-term progress."
+  },
+  "items": [
+    {
+      "title": "Solved 500+ DSA Problems",
+      "description": "Maintained long-term consistency across arrays, trees, graphs, dynamic programming, and interview-style problem sets."
+    },
+    {
+      "title": "Built and Iterated Multiple Portfolio Projects",
+      "description": "Shipped polished frontend and full-stack projects with responsive layouts, scalable component structures, and continuous UX improvements."
+    },
+    {
+      "title": "Competitive Coding and Challenge Participation",
+      "description": "Regularly practiced timed coding challenges to improve speed, accuracy, and structured thinking under constraints."
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "intro": "Hi, I'm",
+  "name": "Pratyush Raj",
+  "summary": "Software engineer focused on scalable systems, clean architecture, and performance.",
+  "highlights": [
+    { "label": "Specialization", "value": "Cloud & Distributed Systems" },
+    { "label": "Expertise", "value": "Scalable Architecture & APIs" },
+    { "label": "Focus", "value": "Performance Optimization" }
+  ],
+  "actions": {
+    "resumeLabel": "View Resume",
+    "resumeHref": "/resume",
+    "contactLabel": "Get in Touch",
+    "contactHref": "#contact"
+  },
+  "socialLinks": [
+    { "label": "GitHub", "href": "https://github.com/sy-Pratyush-raj", "icon": "Github" },
+    { "label": "LinkedIn", "href": "https://www.linkedin.com/in/pratyushraj09/", "icon": "Linkedin" },
+    { "label": "Email", "href": "mailto:rockpratyushraj@gmail.com", "icon": "Mail" }
+  ]
+}

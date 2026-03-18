@@ -1,0 +1,13 @@
+{
+  "sectionHeading": {
+    "eyebrow": "Contact",
+    "title": "Open to internships, collaborations, and frontend opportunities.",
+    "description": "If your team values clean engineering, strong UI quality, and dependable execution, I'd love to connect."
+  },
+  "primaryEmail": "rockpratyushraj@gmail.com",
+  "links": [
+    { "label": "GitHub", "href": "https://github.com/sy-Pratyush-raj" },
+    { "label": "LinkedIn", "href": "https://www.linkedin.com/in/pratyushraj09/" },
+    { "label": "Email", "href": "mailto:rockpratyushraj@gmail.com" }
+  ]
+}

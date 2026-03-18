@@ -1,0 +1,33 @@
+{
+  "sectionHeading": {
+    "eyebrow": "Projects",
+    "title": "Selected projects demonstrating problem-solving, UI development, and system logic.",
+    "description": "A collection of projects showcasing frontend engineering, basic system design, and performance-focused development."
+  },
+  "items": [
+    {
+      "title": "AI Stress Level Tracker",
+      "summary": "Developed a voice-based stress detection system using audio input and AI/ML concepts. Implemented real-time interaction with a visual feedback dashboard. Achieved high performance with Lighthouse scores: Performance (96), Accessibility (98), Best Practices (96).",
+      "tags": ["HTML", "CSS", "JavaScript", "Python"],
+      "href": "https://github.com/sy-Pratyush-raj/AIproject",
+      "repo": "https://github.com/sy-Pratyush-raj/AIproject",
+      "image": "/project-analytics.svg"
+    },
+    {
+      "title": "Rock Paper Scissors Game",
+      "summary": "Built an interactive browser-based game using JavaScript with dynamic game logic and randomization. Focused on responsive UI and smooth gameplay experience. Achieved Lighthouse scores: Performance (90), Accessibility (100), Best Practices (100).",
+      "tags": ["HTML", "CSS", "JavaScript"],
+      "href": "https://github.com/sy-Pratyush-raj/Rock_Paper_Scissor",
+      "repo": "https://github.com/sy-Pratyush-raj/Rock_Paper_Scissor",
+      "image": "/project-game.svg"
+    },
+    {
+      "title": "Student Record Management System (BST)",
+      "summary": "Designed a web-based system using Binary Search Tree (BST) for efficient data storage and retrieval. Implemented CRUD operations with local storage and built a responsive UI for managing student records.",
+      "tags": ["JavaScript", "DSA", "BST", "HTML", "CSS"],
+      "href": "#",
+      "repo": "#",
+      "image": "/project-student-record.svg"
+    }
+  ]
+}

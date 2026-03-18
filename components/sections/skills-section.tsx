@@ -3,7 +3,7 @@
 import { SkillPill } from "@/components/cards/skill-pill";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { skills } from "@/lib/data";
+import { skills, skillsSection } from "@/lib/data";
 
 export function SkillsSection() {
   return (
@@ -11,9 +11,9 @@ export function SkillsSection() {
       <div className="container-shell">
         <Reveal>
           <SectionHeading
-            eyebrow="Toolkit"
-            title="A focused stack for shipping clean, modern web products."
-            description="I&apos;m strongest where UI quality, component architecture, and frontend implementation need to work together."
+            eyebrow={skillsSection.eyebrow}
+            title={skillsSection.title}
+            description={skillsSection.description}
           />
         </Reveal>
         <div className="section-grid mt-8 sm:grid-cols-2 xl:grid-cols-4">

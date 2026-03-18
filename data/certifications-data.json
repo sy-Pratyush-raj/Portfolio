@@ -1,0 +1,21 @@
+{
+  "sectionHeading": {
+    "eyebrow": "Certifications",
+    "title": "Learning credentials and structured growth.",
+    "description": "Formal learning that supports better engineering decisions, delivery workflows, and production readiness."
+  },
+  "items": [
+    {
+      "title": "Cloud Foundations and Deployment Workflows",
+      "issuer": "Structured self-learning track",
+      "note": "Covered deployment pipelines, environment management, and practical cloud fundamentals used in modern web application delivery.",
+      "icon": "Award"
+    },
+    {
+      "title": "Full-Stack Development Practice Program",
+      "issuer": "Project-based implementation",
+      "note": "Built through hands-on product work across frontend engineering, API integration, and continuous iteration on real project workflows.",
+      "icon": "GraduationCap"
+    }
+  ]
+}

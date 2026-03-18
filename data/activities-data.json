@@ -1,0 +1,21 @@
+{
+  "sectionHeading": {
+    "eyebrow": "Extracurriculars",
+    "title": "Professional habits beyond coursework.",
+    "description": "Ongoing activities that strengthen collaboration, learning speed, and practical engineering judgment."
+  },
+  "items": [
+    {
+      "title": "Open Source Exploration",
+      "description": "Learning from real-world repositories, experimenting with UI systems, and contributing improvements over time."
+    },
+    {
+      "title": "Peer Mentoring",
+      "description": "Helping classmates with web fundamentals, debugging, and structured DSA preparation."
+    },
+    {
+      "title": "Technical Writing",
+      "description": "Documenting learnings, project decisions, and problem-solving approaches for future reference."
+    }
+  ]
+}

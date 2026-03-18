@@ -59,10 +59,10 @@ export function Navbar() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[var(--line)] bg-[rgba(246,248,252,0.85)] backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-[var(--line-strong)] bg-[var(--panel-strong)]/95 backdrop-blur-xl">
       <div className="container-shell flex h-[4.8rem] items-center justify-between gap-6">
         <Link href="/" className="flex items-center gap-3">
-          <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-[var(--line)] bg-[var(--surface-soft)] font-[family-name:var(--font-heading)] text-sm font-semibold tracking-[0.18em] text-[var(--foreground)]">
+          <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-[var(--line-strong)] bg-[rgba(96,165,250,0.12)] font-[family-name:var(--font-heading)] text-sm font-semibold tracking-[0.18em] text-[var(--accent)]">
             PR
           </span>
           <span className="font-[family-name:var(--font-heading)] text-sm font-semibold uppercase tracking-[0.3em] text-[var(--foreground)]/90">
@@ -70,7 +70,7 @@ export function Navbar() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--surface-soft)] px-2 py-2 md:flex">
+        <nav className="hidden items-center gap-2 rounded-full border border-[var(--line-strong)] bg-[rgba(15,23,42,0.62)] px-2 py-2 md:flex">
           {navItems.map((item) => (
             <Link
               key={item.id}
@@ -82,7 +82,7 @@ export function Navbar() {
               {active === item.id ? (
                 <motion.span
                   layoutId="nav-pill"
-                  className="absolute inset-0 -z-10 rounded-full bg-[var(--surface-muted)]"
+                  className="absolute inset-0 -z-10 rounded-full bg-[rgba(96,165,250,0.18)]"
                   transition={{ type: "spring", stiffness: 350, damping: 30 }}
                 />
               ) : null}
@@ -94,7 +94,7 @@ export function Navbar() {
         <div className="hidden md:block">
           <Link
             href="#contact"
-            className="inline-flex items-center rounded-full border border-[var(--line-strong)] bg-[var(--surface-soft)] px-5 py-2.5 text-sm font-medium text-[var(--foreground)] transition hover:border-[var(--line-strong)] hover:bg-[var(--surface-muted)]"
+            className="inline-flex items-center rounded-full border border-[var(--line-strong)] bg-[rgba(14,22,40,0.78)] px-5 py-2.5 text-sm font-medium text-[var(--foreground)] transition hover:border-[var(--accent)] hover:bg-[rgba(96,165,250,0.12)]"
           >
             Let&apos;s connect
           </Link>
@@ -103,14 +103,14 @@ export function Navbar() {
         <button
           type="button"
           aria-label="Toggle menu"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--line)] bg-[var(--surface-soft)] text-[var(--foreground)] md:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--line-strong)] bg-[rgba(14,22,40,0.78)] text-[var(--foreground)] md:hidden"
           onClick={() => setOpen((value) => !value)}
         >
           {open ? <X size={18} /> : <Menu size={18} />}
         </button>
       </div>
 
-      <div className="absolute bottom-0 left-0 h-[2px] w-full bg-[var(--surface-soft)]">
+      <div className="absolute bottom-0 left-0 h-[2px] w-full bg-[rgba(148,163,184,0.15)]">
         <div
           className="h-full origin-left bg-gradient-to-r from-[var(--accent)] to-[var(--accent-warm)] transition-transform duration-150"
           style={{ transform: `scaleX(${progress})` }}
@@ -126,12 +126,12 @@ export function Navbar() {
             transition={{ duration: 0.2 }}
             className="container-shell pb-4 md:hidden"
           >
-            <div className="panel flex flex-col gap-2 rounded-[1.5rem] p-3">
+            <div className="panel flex flex-col gap-2 rounded-[1.5rem] border border-[var(--line-strong)] bg-[rgba(8,14,26,0.92)] p-3">
               {navItems.map((item) => (
                 <Link
                   key={item.id}
                   href={item.href}
-                  className="rounded-2xl px-4 py-3 text-sm text-[var(--muted)] transition hover:bg-[var(--surface-soft)] hover:text-[var(--foreground)]"
+                  className="rounded-2xl px-4 py-3 text-sm text-[var(--muted)] transition hover:bg-[rgba(96,165,250,0.15)] hover:text-[var(--foreground)]"
                   onClick={() => setOpen(false)}
                 >
                   {item.label}

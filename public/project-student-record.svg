@@ -1,0 +1,74 @@
+<svg width="1200" height="750" viewBox="0 0 1200 750" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="60" x2="1120" y2="690" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1B32"/>
+      <stop offset="1" stop-color="#112A4A"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="230" y1="150" x2="980" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#183A63"/>
+      <stop offset="1" stop-color="#1A4C7A"/>
+    </linearGradient>
+    <linearGradient id="tree" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="750" rx="28" fill="url(#bg)"/>
+  <rect x="150" y="110" width="900" height="530" rx="28" fill="url(#panel)" stroke="#5FA7D6" stroke-opacity="0.45" stroke-width="2"/>
+
+  <rect x="190" y="150" width="820" height="68" rx="14" fill="#0E2745"/>
+  <text x="222" y="193" fill="#D9EEFF" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700">
+    Student Record Management (BST)
+  </text>
+
+  <rect x="210" y="250" width="420" height="345" rx="18" fill="#0F2D50" stroke="#6EC1EE" stroke-opacity="0.35"/>
+  <text x="240" y="292" fill="#BDE8FF" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="600">
+    Binary Search Tree View
+  </text>
+
+  <circle cx="420" cy="350" r="28" fill="#102844" stroke="url(#tree)" stroke-width="3"/>
+  <text x="412" y="357" fill="#E7F7FF" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">50</text>
+
+  <circle cx="335" cy="430" r="24" fill="#102844" stroke="url(#tree)" stroke-width="3"/>
+  <text x="327" y="436" fill="#E7F7FF" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">32</text>
+
+  <circle cx="505" cy="430" r="24" fill="#102844" stroke="url(#tree)" stroke-width="3"/>
+  <text x="497" y="436" fill="#E7F7FF" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">68</text>
+
+  <circle cx="285" cy="500" r="20" fill="#102844" stroke="url(#tree)" stroke-width="3"/>
+  <text x="278" y="505" fill="#E7F7FF" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">21</text>
+
+  <circle cx="380" cy="500" r="20" fill="#102844" stroke="url(#tree)" stroke-width="3"/>
+  <text x="373" y="505" fill="#E7F7FF" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">41</text>
+
+  <circle cx="460" cy="500" r="20" fill="#102844" stroke="url(#tree)" stroke-width="3"/>
+  <text x="453" y="505" fill="#E7F7FF" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">57</text>
+
+  <circle cx="555" cy="500" r="20" fill="#102844" stroke="url(#tree)" stroke-width="3"/>
+  <text x="548" y="505" fill="#E7F7FF" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">79</text>
+
+  <line x1="404" y1="370" x2="350" y2="409" stroke="#61C7F4" stroke-width="3"/>
+  <line x1="436" y1="370" x2="490" y2="409" stroke="#61C7F4" stroke-width="3"/>
+  <line x1="324" y1="450" x2="296" y2="483" stroke="#61C7F4" stroke-width="3"/>
+  <line x1="346" y1="451" x2="370" y2="483" stroke="#61C7F4" stroke-width="3"/>
+  <line x1="494" y1="450" x2="470" y2="483" stroke="#61C7F4" stroke-width="3"/>
+  <line x1="516" y1="450" x2="544" y2="483" stroke="#61C7F4" stroke-width="3"/>
+
+  <rect x="670" y="250" width="320" height="70" rx="14" fill="#0E2745" stroke="#6EC1EE" stroke-opacity="0.35"/>
+  <text x="696" y="282" fill="#BDE8FF" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="600">CRUD Controls</text>
+  <text x="696" y="305" fill="#93BEDD" font-family="Segoe UI, Arial, sans-serif" font-size="15">Add • Search • Update • Delete</text>
+
+  <rect x="670" y="340" width="320" height="255" rx="18" fill="#0E2745" stroke="#6EC1EE" stroke-opacity="0.35"/>
+  <rect x="694" y="368" width="272" height="42" rx="10" fill="#183F69"/>
+  <rect x="694" y="423" width="272" height="42" rx="10" fill="#183F69"/>
+  <rect x="694" y="478" width="272" height="42" rx="10" fill="#183F69"/>
+  <rect x="694" y="533" width="130" height="36" rx="10" fill="#1F578A"/>
+  <rect x="836" y="533" width="130" height="36" rx="10" fill="#2B6AA5"/>
+
+  <text x="710" y="395" fill="#CFEFFF" font-family="Segoe UI, Arial, sans-serif" font-size="15">Student Name</text>
+  <text x="710" y="450" fill="#CFEFFF" font-family="Segoe UI, Arial, sans-serif" font-size="15">Roll Number</text>
+  <text x="710" y="505" fill="#CFEFFF" font-family="Segoe UI, Arial, sans-serif" font-size="15">Department</text>
+  <text x="738" y="556" fill="#E7F7FF" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Save</text>
+  <text x="868" y="556" fill="#E7F7FF" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Reset</text>
+</svg>

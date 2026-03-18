@@ -1,6 +1,6 @@
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { activities } from "@/lib/data";
+import { activities, activitiesSection } from "@/lib/data";
 
 export function ActivitiesSection() {
   return (
@@ -8,9 +8,9 @@ export function ActivitiesSection() {
       <div className="container-shell">
         <Reveal>
           <SectionHeading
-            eyebrow="Extracurriculars"
-            title="Professional habits beyond coursework."
-            description="Ongoing activities that strengthen collaboration, learning speed, and practical engineering judgment."
+            eyebrow={activitiesSection.eyebrow}
+            title={activitiesSection.title}
+            description={activitiesSection.description}
           />
         </Reveal>
         <div className="section-grid md:grid-cols-3">

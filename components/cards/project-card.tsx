@@ -24,7 +24,7 @@ export function ProjectCard({ title, summary, tags, href, repo, image }: Project
   const repositoryExternal = isExternalHref(repo);
 
   return (
-    <motion.article whileHover={{ y: -8 }} transition={{ duration: 0.25, ease: "easeOut" }}>
+    <motion.article className="h-full" whileHover={{ y: -8 }} transition={{ duration: 0.25, ease: "easeOut" }}>
       <ShineBorder className="h-full">
         <div className="card-standard group panel flex h-full flex-col rounded-[1.9rem] p-4">
           <div className="relative mb-5 aspect-[16/10] overflow-hidden rounded-[1.35rem] border border-[var(--line)] bg-[var(--background-soft)]">

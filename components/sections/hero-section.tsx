@@ -1,26 +1,39 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
+import { useEffect, useState } from "react";
 
-import { heroStats } from "@/lib/data";
+import { heroData } from "@/lib/data";
 
 export function HeroSection() {
-  return (
-    <section id="hero" className="relative overflow-hidden section-spacing pb-16 pt-10 md:pt-16">
-      <div className="container-shell grid items-start gap-10">
-        <div className="space-y-8">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.45 }}
-            className="inline-flex items-center gap-2 rounded-full border border-[var(--line-strong)] bg-[var(--surface-soft)] px-4 py-2 text-xs uppercase tracking-[0.22em] text-[var(--muted)]"
-          >
-            <Sparkles size={14} className="text-[var(--accent)]" />
-            Open to internships • security and cloud roles
-          </motion.div>
+  const iconMap = {
+    Github,
+    Linkedin,
+    Mail
+  } as const;
+  const name = heroData.name;
+  const [typedName, setTypedName] = useState("");
 
+  useEffect(() => {
+    let index = 0;
+    const timer = window.setInterval(() => {
+      index += 1;
+      setTypedName(name.slice(0, index));
+
+      if (index >= name.length) {
+        window.clearInterval(timer);
+      }
+    }, 90);
+
+    return () => window.clearInterval(timer);
+  }, [name]);
+
+  return (
+    <section id="hero" className="relative overflow-hidden pb-16 pt-10 md:pt-16">
+      <div className="container-shell grid min-h-[calc(100vh-4.8rem)] items-center gap-10">
+        <div className="mx-auto -mt-8 max-w-4xl space-y-8 text-center md:-mt-14">
           <motion.div
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
@@ -28,45 +41,66 @@ export function HeroSection() {
             className="space-y-5"
           >
             <h1 className="font-[family-name:var(--font-heading)] text-5xl font-bold leading-[1.05] md:text-8xl">
-              Hi, I&apos;m
+              {heroData.intro}
               <br />
-              <span className="block text-[var(--accent)]">Pratyush Raj</span>
+              <span className="inline-flex min-h-[1.1em] items-center justify-center text-[var(--accent)]">
+                {typedName}
+                <span className="ml-1 inline-block h-[0.9em] w-[2px] animate-pulse bg-[var(--accent)]" />
+              </span>
             </h1>
-            <p className="max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
-              Security analyst in training building reliable, modern web systems with secure architecture and strong UX.
+            <p className="mx-auto max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
+              {heroData.summary}
             </p>
-
-            <div className="flex flex-wrap gap-2">
-              <span className="rounded-full border border-[var(--line)] bg-[var(--surface-soft)] px-3 py-1 text-xs uppercase tracking-[0.2em] text-[var(--accent)]">
-                Next.js
-              </span>
-              <span className="rounded-full border border-[var(--line)] bg-[var(--surface-soft)] px-3 py-1 text-xs uppercase tracking-[0.2em] text-[var(--accent)]">
-                TypeScript
-              </span>
-              <span className="rounded-full border border-[var(--line)] bg-[var(--surface-soft)] px-3 py-1 text-xs uppercase tracking-[0.2em] text-[var(--accent)]">
-                Cloud + Security
-              </span>
-            </div>
-
           </motion.div>
 
-          <div className="flex flex-wrap gap-2">
-            <Link href="/resume" className="inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-4 py-2 font-semibold text-slate-950 transition hover:bg-[var(--accent-strong)]">
-              View Resume
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.12 }}
+            className="mx-auto grid w-full max-w-3xl gap-3 md:grid-cols-3"
+          >
+            {heroData.highlights.map((highlight) => (
+              <div key={highlight.label} className="rounded-2xl border border-[var(--line)] bg-[var(--surface-soft)] px-4 py-3">
+                <p className="text-xs uppercase tracking-[0.18em] text-[var(--muted)]">{highlight.label}</p>
+                <p className="mt-1 text-sm font-semibold text-[var(--foreground)]">{highlight.value}</p>
+              </div>
+            ))}
+          </motion.div>
+
+          <div className="flex flex-wrap justify-center gap-2">
+            <Link
+              href={heroData.actions.resumeHref}
+              className="inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-4 py-2 font-semibold text-slate-950 transition hover:bg-[var(--accent-strong)]"
+            >
+              {heroData.actions.resumeLabel}
             </Link>
-            <Link href="#contact" className="inline-flex items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--surface-soft)] px-4 py-2 text-sm text-[var(--foreground)] transition hover:border-[var(--line-strong)] hover:bg-[var(--surface-muted)]">
-              Get in Touch
+            <Link
+              href={heroData.actions.contactHref}
+              className="inline-flex items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--surface-soft)] px-4 py-2 text-sm text-[var(--foreground)] transition hover:border-[var(--line-strong)] hover:bg-[var(--surface-muted)]"
+            >
+              {heroData.actions.contactLabel}
             </Link>
-            <a href="https://github.com/sy-Pratyush-raj" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--surface-soft)] px-4 py-2 text-sm text-[var(--foreground)] transition hover:border-[var(--line-strong)] hover:bg-[var(--surface-muted)]">
-              GitHub
-            </a>
-            <a href="https://www.linkedin.com/in/pratyushraj09/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--surface-soft)] px-4 py-2 text-sm text-[var(--foreground)] transition hover:border-[var(--line-strong)] hover:bg-[var(--surface-muted)]">
-              LinkedIn
-            </a>
+            {heroData.socialLinks.map((social) => {
+              const Icon = iconMap[social.icon as keyof typeof iconMap] ?? Github;
+              const isExternal = social.href.startsWith("http");
+
+              return (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target={isExternal ? "_blank" : undefined}
+                  rel={isExternal ? "noreferrer" : undefined}
+                  aria-label={social.label}
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--line)] bg-[var(--surface-soft)] text-[var(--foreground)] transition hover:border-[var(--line-strong)] hover:bg-[var(--surface-muted)]"
+                >
+                  <Icon size={17} />
+                </a>
+              );
+            })}
           </div>
         </div>
-
       </div>
     </section>
   );
 }
+

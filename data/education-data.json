@@ -1,0 +1,21 @@
+{
+  "sectionHeading": {
+    "eyebrow": "Education",
+    "title": "Academic foundation and technical progression.",
+    "description": "A concise timeline of the coursework and fundamentals that support current project work."
+  },
+  "items": [
+    {
+      "period": "2023 - 2027",
+      "title": "B.Tech in Computer Science",
+      "subtitle": "Undergraduate degree program",
+      "detail": "Focused on algorithms, operating systems, databases, and software engineering while applying concepts through practical frontend and full-stack projects."
+    },
+    {
+      "period": "2021 - 2023",
+      "title": "Senior Secondary Education",
+      "subtitle": "Science stream",
+      "detail": "Strengthened fundamentals in mathematics, physics, and computer science while building early interest in software."
+    }
+  ]
+}

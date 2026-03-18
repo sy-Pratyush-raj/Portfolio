@@ -1,0 +1,17 @@
+{
+  "sectionHeading": {
+    "eyebrow": "Toolkit",
+    "title": "A practical stack for building and deploying scalable cloud systems.",
+    "description": "I work across cloud infrastructure, automation, and application development to deliver reliable, production-ready solutions."
+  },
+  "items": [
+    { "name": "AWS", "level": "Intermediate", "icon": "Cloud" },
+    { "name": "Docker", "level": "Intermediate", "icon": "Box" },
+    { "name": "Kubernetes", "level": "Beginner", "icon": "Boxes" },
+    { "name": "Terraform", "level": "Beginner", "icon": "Wrench" },
+    { "name": "Linux", "level": "Intermediate", "icon": "Terminal" },
+    { "name": "CI/CD", "level": "Intermediate", "icon": "GitBranch" },
+    { "name": "Shell Scripting", "level": "Intermediate", "icon": "Terminal" },
+    { "name": "SQL", "level": "Intermediate", "icon": "Database" }
+  ]
+}
