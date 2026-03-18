@@ -48,24 +48,21 @@ export function HeroSection() {
               </span>
             </div>
 
-            <div className="grid gap-3 sm:grid-cols-3">
-              {heroStats.map((stat) => (
-                <div key={stat.label} className="rounded-2xl border border-[var(--line)] bg-[var(--surface-soft)] px-4 py-3 text-center">
-                  <p className="font-[family-name:var(--font-heading)] text-2xl font-semibold text-[var(--foreground)]">{stat.value}</p>
-                  <p className="mt-1 text-xs uppercase tracking-[0.2em] text-[var(--muted)]">{stat.label}</p>
-                </div>
-              ))}
-            </div>
           </motion.div>
 
-          <div className="flex flex-wrap gap-3">
-            <Link href="#projects" className="inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-5 py-3 font-semibold text-slate-950 transition hover:bg-[var(--accent-strong)]">
-              View My Work
-              <ArrowRight size={18} />
+          <div className="flex flex-wrap gap-2">
+            <Link href="/resume" className="inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-4 py-2 font-semibold text-slate-950 transition hover:bg-[var(--accent-strong)]">
+              View Resume
             </Link>
-            <Link href="#contact" className="inline-flex items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--surface-soft)] px-5 py-3 text-sm text-[var(--foreground)] transition hover:border-[var(--line-strong)] hover:bg-[var(--surface-muted)]">
-              Let&apos;s Connect
+            <Link href="#contact" className="inline-flex items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--surface-soft)] px-4 py-2 text-sm text-[var(--foreground)] transition hover:border-[var(--line-strong)] hover:bg-[var(--surface-muted)]">
+              Get in Touch
             </Link>
+            <a href="https://github.com/sy-Pratyush-raj" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--surface-soft)] px-4 py-2 text-sm text-[var(--foreground)] transition hover:border-[var(--line-strong)] hover:bg-[var(--surface-muted)]">
+              GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/pratyushraj09/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--surface-soft)] px-4 py-2 text-sm text-[var(--foreground)] transition hover:border-[var(--line-strong)] hover:bg-[var(--surface-muted)]">
+              LinkedIn
+            </a>
           </div>
         </div>
 
