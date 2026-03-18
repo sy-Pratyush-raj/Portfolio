@@ -1,21 +1,39 @@
 {
   "sectionHeading": {
     "eyebrow": "Education",
-    "title": "Academic foundation and technical progression.",
-    "description": "A concise timeline of the coursework and fundamentals that support current project work."
+    "title": "Academic background and technical foundation.",
+    "description": "A structured overview of my education, focusing on core computer science concepts and continuous skill development."
   },
   "items": [
     {
       "period": "2023 - 2027",
-      "title": "B.Tech in Computer Science",
-      "subtitle": "Undergraduate degree program",
-      "detail": "Focused on algorithms, operating systems, databases, and software engineering while applying concepts through practical frontend and full-stack projects."
+      "title": "B.Tech in Computer Science and Engineering",
+      "titleIcon": "GraduationCap",
+      "subtitle": "Lovely Professional University, Punjab",
+      "subtitleIcon": "Building2",
+      "grade": "CGPA: 6.80",
+      "gradeIcon": "BarChart3",
+      "detail": "Focused on core subjects like operating systems, databases, computer networks, and software development."
     },
     {
-      "period": "2021 - 2023",
-      "title": "Senior Secondary Education",
-      "subtitle": "Science stream",
-      "detail": "Strengthened fundamentals in mathematics, physics, and computer science while building early interest in software."
+      "period": "2022 - 2023",
+      "title": "Senior Secondary (Intermediate)",
+      "titleIcon": "School",
+      "subtitle": "Vidya Niketan High School, Patna",
+      "subtitleIcon": "Building2",
+      "grade": "Percentage: 64%",
+      "gradeIcon": "BarChart3",
+      "detail": "Built strong academic fundamentals and developed interest in computer science."
+    },
+    {
+      "period": "2020 - 2021",
+      "title": "Matriculation",
+      "titleIcon": "School",
+      "subtitle": "St. Karen's High School, Danapur",
+      "subtitleIcon": "Building2",
+      "grade": "Percentage: 81%",
+      "gradeIcon": "BarChart3",
+      "detail": "Completed secondary education with strong academic performance."
     }
   ]
 }

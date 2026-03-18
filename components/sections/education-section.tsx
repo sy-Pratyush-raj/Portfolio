@@ -18,10 +18,18 @@ export function EducationSection() {
             <Reveal key={item.title} delay={index * 0.08}>
               <article className="card-standard panel rounded-[1.75rem] p-6">
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent)]">{item.period}</p>
-                <h3 className="mt-4 font-[family-name:var(--font-heading)] text-xl font-semibold text-[var(--foreground)]">
+                <h3 className="mt-4 flex items-center gap-2 font-[family-name:var(--font-heading)] text-xl font-semibold text-[var(--foreground)]">
+                  <item.titleIcon size={18} className="text-[var(--accent)]" />
                   {item.title}
                 </h3>
-                <p className="mt-1 text-sm text-[var(--foreground)]/80">{item.subtitle}</p>
+                <p className="mt-2 flex items-center gap-2 text-sm text-[var(--foreground)]/80">
+                  <item.subtitleIcon size={16} className="text-[var(--muted)]" />
+                  {item.subtitle}
+                </p>
+                <p className="mt-2 flex items-center gap-2 text-sm font-medium text-[var(--foreground)]/85">
+                  <item.gradeIcon size={16} className="text-[var(--accent)]" />
+                  {item.grade}
+                </p>
                 <p className="mt-4 text-sm leading-7 text-[var(--muted)]">{item.detail}</p>
               </article>
             </Reveal>

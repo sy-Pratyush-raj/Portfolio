@@ -1,5 +1,9 @@
 import {
   Award,
+  BarChart3,
+  Building2,
+  BookOpen,
+  Brain,
   Box,
   Boxes,
   Binary,
@@ -11,6 +15,8 @@ import {
   GraduationCap,
   Layers3,
   Rocket,
+  School,
+  ShieldCheck,
   Sparkles,
   Terminal,
   Trophy,
@@ -49,7 +55,18 @@ const skillIconMap: Record<string, LucideIcon> = {
 
 const certificationIconMap: Record<string, LucideIcon> = {
   Award,
-  GraduationCap
+  GraduationCap,
+  ShieldCheck,
+  Sparkles,
+  Brain,
+  BookOpen
+};
+
+const educationIconMap: Record<string, LucideIcon> = {
+  GraduationCap,
+  School,
+  Building2,
+  BarChart3
 };
 
 export const navItems = navData;
@@ -86,7 +103,12 @@ export const activitiesSection = activitiesData.sectionHeading;
 export const activities = activitiesData.items;
 
 export const educationSection = educationData.sectionHeading;
-export const education = educationData.items;
+export const education = educationData.items.map((item) => ({
+  ...item,
+  titleIcon: educationIconMap[item.titleIcon] ?? GraduationCap,
+  subtitleIcon: educationIconMap[item.subtitleIcon] ?? Building2,
+  gradeIcon: educationIconMap[item.gradeIcon] ?? BarChart3
+}));
 
 export const contactSection = {
   sectionHeading: contactData.sectionHeading,

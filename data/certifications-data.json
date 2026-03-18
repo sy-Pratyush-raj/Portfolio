@@ -1,21 +1,45 @@
 {
   "sectionHeading": {
     "eyebrow": "Certifications",
-    "title": "Learning credentials and structured growth.",
-    "description": "Formal learning that supports better engineering decisions, delivery workflows, and production readiness."
+    "title": "Continuous learning in AI, security, and core computer science.",
+    "description": "A curated learning journey focused on AI, security, and fundamental computer science principles."
   },
   "items": [
     {
-      "title": "Cloud Foundations and Deployment Workflows",
-      "issuer": "Structured self-learning track",
-      "note": "Covered deployment pipelines, environment management, and practical cloud fundamentals used in modern web application delivery.",
-      "icon": "Award"
+      "title": "Privacy and Security in Online Social Media",
+      "issuer": "NPTEL IIT Hyderabad",
+      "note": "Focused on security principles, privacy challenges, and safe practices in modern online platforms.",
+      "href": "https://your-certificate-link-1",
+      "icon": "Award",
+      "linkIcon": "ExternalLink",
+      "linkLabel": "View Certificate"
     },
     {
-      "title": "Full-Stack Development Practice Program",
-      "issuer": "Project-based implementation",
-      "note": "Built through hands-on product work across frontend engineering, API integration, and continuous iteration on real project workflows.",
-      "icon": "GraduationCap"
+      "title": "Build Generative AI Apps and Solutions with No-Code Tools",
+      "issuer": "Infosys",
+      "note": "Learned to design and deploy AI-powered applications using no-code platforms and modern generative AI tools.",
+      "href": "https://your-certificate-link-2",
+      "icon": "Award",
+      "linkIcon": "ExternalLink",
+      "linkLabel": "View Certificate"
+    },
+    {
+      "title": "Master Generative AI & Tools",
+      "issuer": "Infosys",
+      "note": "Explored generative AI concepts, tools, and real-world use cases for building intelligent applications.",
+      "href": "https://your-certificate-link-3",
+      "icon": "Award",
+      "linkIcon": "ExternalLink",
+      "linkLabel": "View Certificate"
+    },
+    {
+      "title": "Computational Theory: Language Principles & Finite Automata",
+      "issuer": "Infosys",
+      "note": "Studied theoretical computer science concepts including automata, languages, and computation models.",
+      "href": "https://your-certificate-link-4",
+      "icon": "Award",
+      "linkIcon": "ExternalLink",
+      "linkLabel": "View Certificate"
     }
   ]
 }

@@ -25,8 +25,8 @@
       "title": "Student Record Management System (BST)",
       "summary": "Designed a web-based system using Binary Search Tree (BST) for efficient data storage and retrieval. Implemented CRUD operations with local storage and built a responsive UI for managing student records.",
       "tags": ["JavaScript", "DSA", "BST", "HTML", "CSS"],
-      "href": "#",
-      "repo": "#",
+      "href": "https://github.com/sy-Pratyush-raj/Student-Record-Management-System",
+      "repo": "https://github.com/sy-Pratyush-raj/Student-Record-Management-System",
       "image": "/project-student-record.svg"
     }
   ]
