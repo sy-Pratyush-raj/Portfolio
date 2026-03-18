@@ -14,10 +14,10 @@ export function AboutSection() {
           />
         </Reveal>
         <Reveal delay={0.1}>
-          <div className="section-grid gap-5 lg:grid-cols-[1fr_1.1fr]">
+          <div className="section-grid gap-5 lg:grid-cols-[1.1fr_0.9fr]">
             <div className="panel rounded-[1.75rem] p-5 md:p-6">
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent)]">About me</p>
-              <h3 className="mt-3 font-[family-name:var(--font-heading)] text-2xl font-semibold text-[var(--foreground)]">Cloud engineer with a security-first mindset</h3>
+              <h3 className="mt-3 font-[family-name:var(--font-heading)] text-3xl font-semibold text-[#0f172a]">Cloud engineer with a security-first mindset</h3>
               <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
                 I am focused on building secure cloud solutions, infrastructure as code, and defensive practices that scale. My core strength lies in turning security principles into practical deployments that are observable, resilient, and maintainable.
               </p>
@@ -25,9 +25,8 @@ export function AboutSection() {
                 From environment hardening to automation pipelines, I drive a professional engineering workflow that supports rapid iterations without compromising system safety.
               </p>
             </div>
-            <div className="relative overflow-hidden rounded-full border border-[var(--line)] bg-[var(--surface-soft)] p-3 w-36 h-36 mx-auto md:mx-0">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(37,99,235,0.18),transparent_40%)] rounded-full" />
-              <div className="relative h-full w-full overflow-hidden rounded-full">
+            <div className="relative overflow-hidden rounded-[1.5rem] border border-[var(--line)] bg-[var(--surface-soft)] p-3 w-full max-w-[280px] mx-auto md:mx-0">
+              <div className="relative h-44 w-44 overflow-hidden rounded-[1.25rem]">
                 <img src="/profile-placeholder.jpeg" alt="Pratyush portrait" className="h-full w-full object-cover transition duration-500 hover:scale-105" />
               </div>
             </div>
