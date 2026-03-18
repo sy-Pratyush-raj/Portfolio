@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, Mail } from "lucide-react";
+import { ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
 
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -7,6 +7,12 @@ import { contactLinks, contactSection } from "@/lib/data";
 import { isExternalHref } from "@/lib/link";
 
 export function ContactSection() {
+  const iconMap = {
+    GitHub: Github,
+    LinkedIn: Linkedin,
+    Email: Mail
+  } as const;
+
   return (
     <section id="contact" className="section-frame section-spacing">
       <div className="container-shell">
@@ -30,6 +36,7 @@ export function ContactSection() {
               <div className="flex flex-wrap gap-3">
                 {contactLinks.map((link) => {
                   const external = isExternalHref(link.href);
+                  const Icon = iconMap[link.label as keyof typeof iconMap];
 
                   return (
                     <Link
@@ -39,6 +46,7 @@ export function ContactSection() {
                       rel={external ? "noreferrer" : undefined}
                       className="inline-flex items-center gap-2 rounded-full border border-[var(--line)] px-4 py-3 text-sm text-[var(--muted)] transition duration-200 hover:-translate-y-0.5 hover:border-[var(--line-strong)] hover:text-[var(--foreground)]"
                     >
+                      {Icon ? <Icon size={16} /> : null}
                       {link.label}
                       <ArrowUpRight size={16} />
                     </Link>
