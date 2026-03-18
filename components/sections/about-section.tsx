@@ -28,7 +28,7 @@ export function AboutSection() {
 
         <Reveal delay={0.1}>
           <div className="section-grid gap-6 lg:grid-cols-[1.2fr_0.8fr] items-center">
-            <div className="panel rounded-[1.75rem] p-6 md:p-7">
+            <div className="panel rounded-[1.75rem] p-6 transition duration-300 hover:-translate-y-1 md:p-7">
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent)]">
                 {aboutSection.aboutCard.tag}
               </p>
@@ -45,7 +45,7 @@ export function AboutSection() {
                 {aboutSection.techStack.map((tech) => (
                   <span
                     key={tech}
-                    className="text-xs px-3 py-1 rounded-full border border-[var(--line)] bg-[var(--surface-soft)] text-[var(--foreground)]"
+                    className="text-xs px-3 py-1 rounded-full border border-[var(--line)] bg-[var(--surface-soft)] text-[var(--foreground)] transition duration-200 hover:-translate-y-0.5 hover:border-[var(--line-strong)]"
                   >
                     {tech}
                   </span>
@@ -54,7 +54,7 @@ export function AboutSection() {
             </div>
 
             <div className="relative flex justify-center">
-              <div className="h-72 w-72 rounded-full border-4 border-[var(--accent)] bg-[var(--surface-soft)] p-2 shadow-xl overflow-hidden md:h-80 md:w-80">
+              <div className="h-72 w-72 overflow-hidden rounded-full border-4 border-[var(--accent)] bg-[var(--surface-soft)] p-2 shadow-xl transition duration-300 hover:scale-[1.02] md:h-80 md:w-80">
                 <Image
                   src="/profile-placeholder.jpeg"
                   alt="Pratyush portrait"
@@ -72,7 +72,7 @@ export function AboutSection() {
             {aboutStats.map((stat) => (
               <article
                 key={stat.label}
-                className="panel rounded-[1.5rem] p-6 text-center"
+                className="panel rounded-[1.5rem] p-6 text-center transition duration-300 hover:-translate-y-1"
               >
                 <p className="text-3xl font-bold">{stat.value}</p>
                 <p className="mt-2 text-xs uppercase tracking-wider text-[var(--muted)]">

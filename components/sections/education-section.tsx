@@ -16,7 +16,7 @@ export function EducationSection() {
         <div className="section-grid md:grid-cols-2">
           {education.map((item, index) => (
             <Reveal key={item.title} delay={index * 0.08}>
-              <article className="card-standard panel rounded-[1.75rem] p-6">
+              <article className="card-standard panel rounded-[1.75rem] p-6 transition duration-300 hover:-translate-y-1">
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent)]">{item.period}</p>
                 <h3 className="mt-4 flex items-center gap-2 font-[family-name:var(--font-heading)] text-xl font-semibold text-[var(--foreground)]">
                   <item.titleIcon size={18} className="text-[var(--accent)]" />

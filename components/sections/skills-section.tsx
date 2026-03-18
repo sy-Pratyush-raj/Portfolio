@@ -18,7 +18,7 @@ export function SkillsSection() {
         </Reveal>
         <div className="section-grid mt-8 sm:grid-cols-2 xl:grid-cols-4">
           {skills.map((skill, index) => (
-            <Reveal key={skill.name} delay={index * 0.05}>
+            <Reveal key={skill.name} delay={index * 0.05} className="h-full">
               <SkillPill {...skill} />
             </Reveal>
           ))}

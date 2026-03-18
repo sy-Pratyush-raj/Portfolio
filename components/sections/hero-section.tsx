@@ -60,41 +60,52 @@ export function HeroSection() {
             className="mx-auto grid w-full max-w-3xl gap-3 md:grid-cols-3"
           >
             {heroData.highlights.map((highlight) => (
-              <div key={highlight.label} className="rounded-2xl border border-[var(--line)] bg-[var(--surface-soft)] px-4 py-3">
+              <motion.div
+                key={highlight.label}
+                whileHover={{ y: -4, scale: 1.02 }}
+                transition={{ duration: 0.2 }}
+                className="rounded-2xl border border-[var(--line)] bg-[var(--surface-soft)] px-4 py-3"
+              >
                 <p className="text-xs uppercase tracking-[0.18em] text-[var(--muted)]">{highlight.label}</p>
                 <p className="mt-1 text-sm font-semibold text-[var(--foreground)]">{highlight.value}</p>
-              </div>
+              </motion.div>
             ))}
           </motion.div>
 
           <div className="flex flex-wrap justify-center gap-2">
-            <Link
-              href={heroData.actions.resumeHref}
-              className="inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-4 py-2 font-semibold text-slate-950 transition hover:bg-[var(--accent-strong)]"
-            >
-              {heroData.actions.resumeLabel}
-            </Link>
-            <Link
-              href={heroData.actions.contactHref}
-              className="inline-flex items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--surface-soft)] px-4 py-2 text-sm text-[var(--foreground)] transition hover:border-[var(--line-strong)] hover:bg-[var(--surface-muted)]"
-            >
-              {heroData.actions.contactLabel}
-            </Link>
+            <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.97 }}>
+              <Link
+                href={heroData.actions.resumeHref}
+                className="inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-4 py-2 font-semibold text-slate-950 transition hover:bg-[var(--accent-strong)]"
+              >
+                {heroData.actions.resumeLabel}
+              </Link>
+            </motion.div>
+            <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.97 }}>
+              <Link
+                href={heroData.actions.contactHref}
+                className="inline-flex items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--surface-soft)] px-4 py-2 text-sm text-[var(--foreground)] transition hover:border-[var(--line-strong)] hover:bg-[var(--surface-muted)]"
+              >
+                {heroData.actions.contactLabel}
+              </Link>
+            </motion.div>
             {heroData.socialLinks.map((social) => {
               const Icon = iconMap[social.icon as keyof typeof iconMap] ?? Github;
               const isExternal = social.href.startsWith("http");
 
               return (
-                <a
+                <motion.a
                   key={social.label}
                   href={social.href}
                   target={isExternal ? "_blank" : undefined}
                   rel={isExternal ? "noreferrer" : undefined}
                   aria-label={social.label}
+                  whileHover={{ y: -3, scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                   className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--line)] bg-[var(--surface-soft)] text-[var(--foreground)] transition hover:border-[var(--line-strong)] hover:bg-[var(--surface-muted)]"
                 >
                   <Icon size={17} />
-                </a>
+                </motion.a>
               );
             })}
           </div>

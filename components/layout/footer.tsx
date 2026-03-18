@@ -20,7 +20,7 @@ export function Footer() {
                 href={link.href}
                 target={external ? "_blank" : undefined}
                 rel={external ? "noreferrer" : undefined}
-                className="font-medium transition hover:text-[var(--foreground)]"
+                className="font-medium transition duration-200 hover:-translate-y-0.5 hover:text-[var(--foreground)]"
               >
                 {link.label}
               </Link>

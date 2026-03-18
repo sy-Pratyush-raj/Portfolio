@@ -25,7 +25,7 @@ export function CertificationsSection() {
 
             return (
               <Reveal key={certification.title} delay={index * 0.08}>
-                <div className="card-standard panel rounded-[1.75rem] p-6">
+                <div className="card-standard panel rounded-[1.75rem] p-6 transition duration-300 hover:-translate-y-1">
                   <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[rgba(167,243,208,0.12)] text-[var(--accent)]">
                     <Award size={20} />
                   </span>
@@ -40,7 +40,7 @@ export function CertificationsSection() {
                         href={certification.href}
                         target={certificateExternal ? "_blank" : undefined}
                         rel={certificateExternal ? "noreferrer" : undefined}
-                        className="inline-flex items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--surface-soft)] px-4 py-2 text-sm font-medium text-[var(--foreground)] transition hover:border-[var(--line-strong)] hover:bg-[var(--surface-muted)]"
+                        className="inline-flex items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--surface-soft)] px-4 py-2 text-sm font-medium text-[var(--foreground)] transition duration-200 hover:-translate-y-0.5 hover:border-[var(--line-strong)] hover:bg-[var(--surface-muted)]"
                       >
                         {certification.linkLabel ?? "View Certificate"}
                         <ExternalLink size={16} />
