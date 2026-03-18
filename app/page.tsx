@@ -2,7 +2,6 @@ import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 import { AboutSection } from "@/components/sections/about-section";
 import { AchievementsSection } from "@/components/sections/achievements-section";
-import { ActivitiesSection } from "@/components/sections/activities-section";
 import { CertificationsSection } from "@/components/sections/certifications-section";
 import { ContactSection } from "@/components/sections/contact-section";
 import { EducationSection } from "@/components/sections/education-section";
@@ -24,7 +23,6 @@ export default function HomePage() {
         <ProjectsSection />
         <CertificationsSection />
         <AchievementsSection />
-        <ActivitiesSection />
         <EducationSection />
         <ContactSection />
       </main>

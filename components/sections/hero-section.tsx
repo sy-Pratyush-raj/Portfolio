@@ -36,16 +36,16 @@ export function HeroSection() {
             className="space-y-7"
           >
             <div className="space-y-4">
-              <p className="text-sm font-medium uppercase tracking-[0.28em] text-[var(--accent)]">
-                Pratyush Raj | Developer Portfolio
-              </p>
-              <h1 className="max-w-4xl font-[family-name:var(--font-heading)] text-5xl font-semibold leading-[0.98] text-[var(--foreground)] md:text-7xl">
-                I build <span className="text-[var(--accent)]">professional web experiences</span> with sharp UI, thoughtful structure, and reliable frontend engineering.
+              <h1 className="font-[family-name:var(--font-heading)] text-4xl font-bold leading-[1.05] text-[var(--foreground)] md:text-7xl">
+                Hi, I&apos;m Pratyush Raj
               </h1>
+              <p className="text-sm font-medium uppercase tracking-[0.28em] text-[var(--accent)] md:text-base">
+                Security Analyst in Training
+              </p>
             </div>
 
-            <p className="max-w-2xl text-base leading-8 text-[var(--muted)] md:text-lg">
-              I&apos;m a computer science student focused on creating polished digital products with Next.js, TypeScript, and strong attention to usability, responsiveness, and code quality.
+            <p className="max-w-2xl text-base font-semibold leading-8 text-[var(--foreground)] md:text-lg">
+              Aspiring Security Analyst focused on ethical hacking and network security.
             </p>
 
             <div className="grid gap-4 sm:grid-cols-3">
@@ -93,20 +93,28 @@ export function HeroSection() {
             transition={{ duration: 0.55, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
             className="flex flex-col gap-4 sm:flex-row"
           >
-            <Link
-              href="#projects"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--accent)] px-6 py-3.5 font-semibold text-slate-950 transition hover:bg-[var(--accent-strong)] hover:shadow-[0_0_20px_rgba(37,99,235,0.24)]"
-            >
-              Explore Projects
-              <ArrowRight size={18} />
-            </Link>
-            <Link
-              href="/resume"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-[var(--line-strong)] bg-[var(--surface-soft)] px-6 py-3.5 text-[var(--foreground)] transition hover:border-[var(--line-strong)] hover:bg-[var(--surface-muted)]"
-            >
-              View Resume
-              <Download size={18} />
-            </Link>
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <Link
+                href="#projects"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--accent)] px-6 py-3.5 font-semibold text-slate-950 transition hover:bg-[var(--accent-strong)] hover:shadow-[0_0_20px_rgba(37,99,235,0.24)]"
+              >
+                View My Work
+                <ArrowRight size={18} />
+              </Link>
+              <Link
+                href="#contact"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-[var(--line-strong)] bg-[var(--surface-soft)] px-6 py-3.5 text-[var(--foreground)] transition hover:border-[var(--line-strong)] hover:bg-[var(--surface-muted)]"
+              >
+                Get In Touch
+              </Link>
+              <Link
+                href="/resume"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-[var(--line-strong)] bg-[var(--surface-soft)] px-6 py-3.5 text-[var(--foreground)] transition hover:border-[var(--line-strong)] hover:bg-[var(--surface-muted)]"
+              >
+                Download CV
+                <Download size={18} />
+              </Link>
+            </div>
           </motion.div>
 
           <motion.div
@@ -136,58 +144,16 @@ export function HeroSection() {
           </motion.div>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.94, y: 20 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          className="relative mx-auto w-full max-w-sm lg:max-w-md"
-        >
-          <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-[var(--accent)]/24 via-transparent to-[var(--accent-warm)]/18 blur-[90px]" />
-
-          <div className="panel relative overflow-hidden rounded-[2.5rem] border border-[var(--line)] shadow-[0_20px_45px_rgba(15,23,42,0.14)]">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.12),transparent_36%),linear-gradient(180deg,transparent,rgba(15,23,42,0.04))]" />
-            <div className="relative aspect-[3/4] w-full overflow-hidden">
-              <Image
-                src="/profile-placeholder.jpeg"
-                alt="Developer portrait placeholder"
-                fill
-                priority
-                className="object-cover transition-transform duration-700 hover:scale-105"
-              />
-              <div className="absolute inset-0 ring-1 ring-inset ring-[var(--line)]" />
-            </div>
-
-            <div className="absolute inset-x-5 bottom-5 rounded-[1.6rem] border border-[var(--line)] bg-[rgba(255,255,255,0.82)] p-4 backdrop-blur-xl">
-              <p className="text-xs uppercase tracking-[0.24em] text-[var(--accent)]">
-                Current focus
-              </p>
-              <p className="mt-2 font-[family-name:var(--font-heading)] text-xl font-semibold text-[var(--foreground)]">
-                Product-minded frontend development
-              </p>
-              <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
-                Building portfolio-grade interfaces with stronger visual hierarchy, cleaner components, and maintainable code.
-              </p>
-            </div>
+        <div className="grid gap-3 sm:grid-cols-2">
+          <div className="panel rounded-[1.5rem] border border-[var(--line)] bg-[var(--surface-soft)] p-4">
+            <p className="text-xs uppercase tracking-[0.2em] text-[var(--accent)]">Strength</p>
+            <p className="mt-2 text-sm leading-6 text-[var(--muted)]">Clean implementation with attention to usability and detail.</p>
           </div>
-
-          <div className="panel absolute -left-8 top-10 hidden max-w-[12rem] rounded-[1.5rem] p-4 lg:block">
-            <p className="text-xs uppercase tracking-[0.2em] text-[var(--accent)]">
-              Strength
-            </p>
-            <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
-              Clean implementation with attention to usability and detail.
-            </p>
+          <div className="panel rounded-[1.5rem] border border-[var(--line)] bg-[var(--surface-soft)] p-4">
+            <p className="text-xs uppercase tracking-[0.2em] text-[var(--accent)]">Focus</p>
+            <p className="mt-2 text-sm leading-6 text-[var(--muted)]">Shipping modern interfaces that feel premium and trustworthy.</p>
           </div>
-
-          <div className="panel absolute -right-8 bottom-12 hidden max-w-[13rem] rounded-[1.5rem] p-4 lg:block">
-            <p className="text-xs uppercase tracking-[0.2em] text-[var(--accent)]">
-              Focus
-            </p>
-            <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
-              Shipping modern interfaces that feel premium and trustworthy.
-            </p>
-          </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

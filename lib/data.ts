@@ -18,7 +18,6 @@ export const navItems = [
   { label: "Projects", href: "#projects", id: "projects" },
   { label: "Certifications", href: "#certifications", id: "certifications" },
   { label: "Achievements", href: "#achievements", id: "achievements" },
-  { label: "Activities", href: "#activities", id: "activities" },
   { label: "Education", href: "#education", id: "education" },
   { label: "Contact", href: "#contact", id: "contact" }
 ] as const;
@@ -62,15 +61,7 @@ export const projects = [
     repo: "#",
     image: "/project-analytics.svg"
   },
-  {
-    title: "Developer Metrics Hub",
-    summary:
-      "Designed and developed a developer dashboard that consolidates coding activity, streaks, and project momentum into an actionable single view.",
-    tags: ["React", "API Integration", "Dashboard UX"],
-    href: "#",
-    repo: "#",
-    image: "/project-dashboard.svg"
-  },
+
   {
     title: "Rock Paper Scissors Arena",
     summary:

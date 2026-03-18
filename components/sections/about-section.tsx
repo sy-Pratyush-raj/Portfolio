@@ -9,13 +9,33 @@ export function AboutSection() {
         <Reveal>
           <SectionHeading
             eyebrow="About"
-            title="I build interfaces that are clear for users and reliable for teams."
-            description="I approach frontend engineering with a product mindset: clean architecture, thoughtful UX decisions, and implementation that scales beyond a demo."
+            title="Cloud and security engineering for reliable production systems."
+            description="I combine cloud automation, secure architecture, and polished interfaces to deliver dependable product experiences."
           />
         </Reveal>
         <Reveal delay={0.1}>
-          <div className="section-grid lg:grid-cols-3">
-            <article className="card-standard panel rounded-[1.75rem] p-6 lg:col-span-2">
+          <div className="section-grid gap-5 lg:grid-cols-[1fr_1.1fr]">
+            <div className="panel rounded-[1.75rem] p-5 md:p-6">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent)]">About me</p>
+              <h3 className="mt-3 font-[family-name:var(--font-heading)] text-2xl font-semibold text-[var(--foreground)]">Cloud engineer with a security-first mindset</h3>
+              <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
+                I am focused on building secure cloud solutions, infrastructure as code, and defensive practices that scale. My core strength lies in turning security principles into practical deployments that are observable, resilient, and maintainable.
+              </p>
+              <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
+                From environment hardening to automation pipelines, I drive a professional engineering workflow that supports rapid iterations without compromising system safety.
+              </p>
+            </div>
+            <div className="relative overflow-hidden rounded-full border border-[var(--line)] bg-[var(--surface-soft)] p-3 w-36 h-36 mx-auto md:mx-0">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(37,99,235,0.18),transparent_40%)] rounded-full" />
+              <div className="relative h-full w-full overflow-hidden rounded-full">
+                <img src="/profile-placeholder.jpeg" alt="Pratyush portrait" className="h-full w-full object-cover transition duration-500 hover:scale-105" />
+              </div>
+            </div>
+          </div>
+        </Reveal>
+        <Reveal delay={0.2}>
+          <div className="section-grid mt-8 lg:grid-cols-3">
+            <article className="card-standard panel rounded-[1.75rem] p-6 lg:col-span-1">
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent)]">Profile Summary</p>
               <p className="mt-4 text-sm leading-8 text-[var(--muted)]">
                 I&apos;m a computer science student and frontend-focused developer who converts product ideas into polished, maintainable applications. I prioritize readable code, reusable components, responsive layouts, and smooth user journeys. Alongside frontend development, I continue strengthening backend and deployment skills so I can contribute across the full delivery cycle.

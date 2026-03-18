@@ -1,22 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f6f8fc;
-  --background-soft: #edf2f8;
-  --background-elevated: #e7edf6;
-  --panel: rgba(255, 255, 255, 0.82);
-  --panel-strong: rgba(255, 255, 255, 0.92);
-  --surface-soft: rgba(255, 255, 255, 0.58);
-  --surface-muted: rgba(15, 23, 42, 0.06);
-  --foreground: #0f172a;
-  --muted: #5d6780;
-  --line: rgba(15, 23, 42, 0.12);
-  --line-strong: rgba(15, 23, 42, 0.22);
-  --accent: #2563eb;
-  --accent-strong: #1d4ed8;
-  --accent-warm: #ea580c;
-  --shadow: 0 24px 80px rgba(15, 23, 42, 0.08);
-  --gradient-border: linear-gradient(135deg, rgba(37, 99, 235, 0.28), rgba(234, 88, 12, 0.2), rgba(255, 255, 255, 0.06));
+  --background: #0b1220;
+  --background-soft: #111b2e;
+  --background-elevated: #131f38;
+  --panel: rgba(10, 16, 30, 0.72);
+  --panel-strong: rgba(15, 23, 42, 0.85);
+  --surface-soft: rgba(255, 255, 255, 0.08);
+  --surface-muted: rgba(255, 255, 255, 0.08);
+  --foreground: #e2e8f0;
+  --muted: #95a3be;
+  --line: rgba(148, 163, 184, 0.2);
+  --line-strong: rgba(148, 163, 184, 0.35);
+  --accent: #60a5fa;
+  --accent-strong: #3b82f6;
+  --accent-warm: #f97316;
+  --shadow: 0 24px 70px rgba(0, 0, 0, 0.4);
+  --gradient-border: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(34, 211, 238, 0.1), rgba(236, 72, 153, 0.12));
 }
 
 * {
@@ -31,10 +31,9 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(circle at 10% 16%, rgba(37, 99, 235, 0.13), transparent 24%),
-    radial-gradient(circle at 85% 10%, rgba(234, 88, 12, 0.11), transparent 22%),
-    radial-gradient(circle at 50% 100%, rgba(37, 99, 235, 0.09), transparent 30%),
-    linear-gradient(180deg, #f8faff 0%, #f5f8fd 48%, #eef3fa 100%);
+    radial-gradient(circle at 15% 8%, rgba(96, 165, 250, 0.15), transparent 28%),
+    radial-gradient(circle at 85% 12%, rgba(249, 115, 22, 0.14), transparent 24%),
+    linear-gradient(180deg, #0a1221 0%, #0b1530 38%, #101b3f 100%);
   color: var(--foreground);
   font-family: var(--font-body), sans-serif;
   position: relative;
