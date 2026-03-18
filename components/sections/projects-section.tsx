@@ -5,16 +5,16 @@ import { projects } from "@/lib/data";
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="section-spacing">
+    <section id="projects" className="section-frame section-spacing">
       <div className="container-shell">
         <Reveal>
           <SectionHeading
             eyebrow="Projects"
-            title="Selected work with room for real case studies."
-            description="Each card is ready for your live links, repositories, screenshots, and measurable outcomes."
+            title="Projects presented like case studies, not just screenshots."
+            description="Each project highlights problem context, implementation approach, and frontend quality standards."
           />
         </Reveal>
-        <div className="grid gap-5 lg:grid-cols-3">
+        <div className="section-grid lg:grid-cols-3">
           {projects.map((project, index) => (
             <Reveal key={project.title} delay={index * 0.08}>
               <ProjectCard {...project} />

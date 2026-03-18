@@ -17,8 +17,7 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   title: "Pratyush Raj | Developer Portfolio",
   description:
-    "Modern developer portfolio built with Next.js, TypeScript, Tailwind CSS, and motion-driven UI.",
-  metadataBase: new URL("https://example.com")
+    "Professional developer portfolio for Pratyush Raj, built with Next.js, TypeScript, Tailwind CSS, and motion-led UI."
 };
 
 export default function RootLayout({

@@ -4,27 +4,38 @@ import { aboutStats } from "@/lib/data";
 
 export function AboutSection() {
   return (
-    <section id="about" className="section-spacing">
-      <div className="container-shell grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+    <section id="about" className="section-frame section-spacing">
+      <div className="container-shell">
         <Reveal>
           <SectionHeading
             eyebrow="About"
-            title="A developer portfolio with product thinking."
-            description="This structure is designed to be easy to customize later. Replace the copy, add real metrics, and keep the component system intact as your work grows."
+            title="I build interfaces that are clear for users and reliable for teams."
+            description="I approach frontend engineering with a product mindset: clean architecture, thoughtful UX decisions, and implementation that scales beyond a demo."
           />
         </Reveal>
-        <Reveal delay={0.1} className="space-y-6">
-          <div className="panel rounded-[1.75rem] p-7">
-            <p className="text-base leading-8 text-[var(--muted)]">
-              I enjoy turning ideas into responsive, production-ready interfaces with a sharp focus on clarity, performance, and interaction quality. My current interests include frontend systems, scalable UI architecture, cloud engineering, and strong problem-solving foundations through DSA.
-            </p>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-3">
+        <Reveal delay={0.1}>
+          <div className="section-grid lg:grid-cols-3">
+            <article className="card-standard panel rounded-[1.75rem] p-6 lg:col-span-2">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent)]">Profile Summary</p>
+              <p className="mt-4 text-sm leading-8 text-[var(--muted)]">
+                I&apos;m a computer science student and frontend-focused developer who converts product ideas into polished, maintainable applications. I prioritize readable code, reusable components, responsive layouts, and smooth user journeys. Alongside frontend development, I continue strengthening backend and deployment skills so I can contribute across the full delivery cycle.
+              </p>
+            </article>
+
+            <article className="card-standard panel rounded-[1.75rem] p-6">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent)]">Working Style</p>
+              <ul className="mt-4 space-y-3 text-sm leading-7 text-[var(--muted)]">
+                <li>Design with clarity before complexity.</li>
+                <li>Ship reusable and maintainable UI blocks.</li>
+                <li>Keep performance and usability measurable.</li>
+              </ul>
+            </article>
+
             {aboutStats.map((stat) => (
-              <div key={stat.label} className="panel rounded-[1.5rem] p-5">
-                <p className="font-[family-name:var(--font-heading)] text-2xl font-semibold text-white">{stat.value}</p>
-                <p className="mt-2 text-sm text-[var(--muted)]">{stat.label}</p>
-              </div>
+              <article key={stat.label} className="card-standard panel rounded-[1.75rem] p-6">
+                <p className="font-[family-name:var(--font-heading)] text-3xl font-bold text-[var(--foreground)]">{stat.value}</p>
+                <p className="mt-2 text-xs font-semibold uppercase tracking-wider text-[var(--muted)]">{stat.label}</p>
+              </article>
             ))}
           </div>
         </Reveal>

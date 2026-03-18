@@ -16,7 +16,7 @@ export function ShineBorder({ children, className = "" }: ShineBorderProps) {
         animate={{ x: ["-10%", "10%", "-10%"] }}
         transition={{ duration: 7, repeat: Infinity, ease: "linear" }}
       />
-      <div className="absolute inset-0 rounded-[inherit] border border-white/10" />
+      <div className="absolute inset-0 rounded-[inherit] border border-[var(--line)]" />
       <div className="relative rounded-[inherit] bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02))]">
         {children}
       </div>

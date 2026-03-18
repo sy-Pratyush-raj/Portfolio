@@ -4,20 +4,20 @@ import { activities } from "@/lib/data";
 
 export function ActivitiesSection() {
   return (
-    <section id="activities" className="section-spacing">
+    <section id="activities" className="section-frame section-spacing">
       <div className="container-shell">
         <Reveal>
           <SectionHeading
             eyebrow="Extracurriculars"
-            title="Beyond coursework and project delivery."
-            description="A good portfolio shows how you engage with the broader developer ecosystem, not only what you build."
+            title="Professional habits beyond coursework."
+            description="Ongoing activities that strengthen collaboration, learning speed, and practical engineering judgment."
           />
         </Reveal>
-        <div className="grid gap-5 md:grid-cols-3">
+        <div className="section-grid md:grid-cols-3">
           {activities.map((activity, index) => (
             <Reveal key={activity.title} delay={index * 0.08}>
-              <div className="panel rounded-[1.75rem] p-6">
-                <h3 className="font-[family-name:var(--font-heading)] text-xl font-semibold text-white">{activity.title}</h3>
+              <div className="card-standard panel rounded-[1.75rem] p-6">
+                <h3 className="font-[family-name:var(--font-heading)] text-xl font-semibold text-[var(--foreground)]">{activity.title}</h3>
                 <p className="mt-3 text-sm leading-7 text-[var(--muted)]">{activity.description}</p>
               </div>
             </Reveal>
