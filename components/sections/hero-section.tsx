@@ -1,23 +1,15 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Download, Github, Linkedin, Mail, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 
-import { contactLinks, heroHighlights, heroStats } from "@/lib/data";
-import { isExternalHref } from "@/lib/link";
-
-const socialIcons = {
-  GitHub: Github,
-  LinkedIn: Linkedin,
-  Email: Mail
-} as const;
+import { heroStats } from "@/lib/data";
 
 export function HeroSection() {
   return (
     <section id="hero" className="relative overflow-hidden section-spacing pb-16 pt-10 md:pt-16">
-      <div className="container-shell grid items-start gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+      <div className="container-shell grid items-start gap-10">
         <div className="space-y-8">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -35,8 +27,10 @@ export function HeroSection() {
             transition={{ duration: 0.55, delay: 0.05 }}
             className="space-y-5"
           >
-            <h1 className="font-[family-name:var(--font-heading)] text-4xl font-bold leading-[1.05] md:text-7xl">
-              Hi, I&apos;m Pratyush Raj
+            <h1 className="font-[family-name:var(--font-heading)] text-5xl font-bold leading-[1.05] md:text-8xl">
+              Hi, I&apos;m
+              <br />
+              <span className="block text-[var(--accent)]">Pratyush Raj</span>
             </h1>
             <p className="max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
               Security analyst in training building reliable, modern web systems with secure architecture and strong UX.
@@ -75,19 +69,6 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="panel rounded-[2rem] border border-[var(--line)] bg-[var(--surface-soft)] p-4 md:p-6">
-          <h2 className="font-[family-name:var(--font-heading)] text-lg font-semibold text-[var(--foreground)]">Professional Snapshot</h2>
-          <ul className="mt-4 space-y-3 text-sm leading-7 text-[var(--muted)]">
-            <li>Secure front-end builds with performance-first best practices.</li>
-            <li>Production deployments with maintainable architecture and observability.</li>
-            <li>Product-focused delivery aligned with team and business goals.</li>
-          </ul>
-          <div className="mt-4 grid gap-2 text-left text-xs uppercase tracking-[0.18em] text-[var(--accent)]">
-            <span className="rounded-full border border-[var(--line)] px-2 py-1">Ethical Hacking</span>
-            <span className="rounded-full border border-[var(--line)] px-2 py-1">Cloud Security</span>
-            <span className="rounded-full border border-[var(--line)] px-2 py-1">Rapid Iteration</span>
-          </div>
-        </div>
       </div>
     </section>
   );

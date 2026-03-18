@@ -14,7 +14,12 @@ export function AboutSection() {
           />
         </Reveal>
         <Reveal delay={0.1}>
-          <div className="section-grid gap-5 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="section-grid gap-5 lg:grid-cols-[0.9fr_1.1fr] items-center">
+            <div className="relative flex justify-center">
+              <div className="h-60 w-60 rounded-full border-4 border-[var(--accent)] bg-[var(--surface-soft)] p-2 shadow-xl overflow-hidden md:h-72 md:w-72">
+                <img src="/profile-placeholder.jpeg" alt="Pratyush portrait" className="h-full w-full rounded-full object-cover" />
+              </div>
+            </div>
             <div className="panel rounded-[1.75rem] p-5 md:p-6">
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent)]">About me</p>
               <h3 className="mt-3 font-[family-name:var(--font-heading)] text-3xl font-semibold text-[#0f172a]">Cloud engineer with a security-first mindset</h3>
@@ -24,11 +29,6 @@ export function AboutSection() {
               <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
                 From environment hardening to automation pipelines, I drive a professional engineering workflow that supports rapid iterations without compromising system safety.
               </p>
-            </div>
-            <div className="relative overflow-hidden rounded-[1.5rem] border border-[var(--line)] bg-[var(--surface-soft)] p-3 w-full max-w-[280px] mx-auto md:mx-0">
-              <div className="relative h-44 w-44 overflow-hidden rounded-[1.25rem]">
-                <img src="/profile-placeholder.jpeg" alt="Pratyush portrait" className="h-full w-full object-cover transition duration-500 hover:scale-105" />
-              </div>
             </div>
           </div>
         </Reveal>
