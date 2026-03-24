@@ -9,36 +9,36 @@
       "title": "Privacy and Security in Online Social Media",
       "issuer": "NPTEL IIT Hyderabad",
       "note": "Focused on security principles, privacy challenges, and safe practices in modern online platforms.",
-      "href": "https://your-certificate-link-1",
+      "href": "/certificates/nptel-security.jpg",
+      "image": "/certificates/nptel-security.jpg",
       "icon": "Award",
-      "linkIcon": "ExternalLink",
       "linkLabel": "View Certificate"
     },
     {
       "title": "Build Generative AI Apps and Solutions with No-Code Tools",
       "issuer": "Infosys",
-      "note": "Learned to design and deploy AI-powered applications using no-code platforms and modern generative AI tools.",
-      "href": "https://your-certificate-link-2",
+      "note": "Learned to design AI-powered applications using no-code tools.",
+      "href": "/certificates/genai-nocode.jpg",
+      "image": "/certificates/genai-nocode.jpg",
       "icon": "Award",
-      "linkIcon": "ExternalLink",
       "linkLabel": "View Certificate"
     },
     {
       "title": "Master Generative AI & Tools",
       "issuer": "Infosys",
-      "note": "Explored generative AI concepts, tools, and real-world use cases for building intelligent applications.",
-      "href": "https://your-certificate-link-3",
+      "note": "Explored generative AI concepts and real-world applications.",
+      "href": "/certificates/genai-master.jpg",
+      "image": "/certificates/genai-master.jpg",
       "icon": "Award",
-      "linkIcon": "ExternalLink",
       "linkLabel": "View Certificate"
     },
     {
-      "title": "Computational Theory: Language Principles & Finite Automata",
+      "title": "Computational Theory & Finite Automata",
       "issuer": "Infosys",
-      "note": "Studied theoretical computer science concepts including automata, languages, and computation models.",
-      "href": "https://your-certificate-link-4",
+      "note": "Studied automata theory and formal languages.",
+      "href": "/certificates/automata.jpg",
+      "image": "/certificates/automata.jpg",
       "icon": "Award",
-      "linkIcon": "ExternalLink",
       "linkLabel": "View Certificate"
     }
   ]

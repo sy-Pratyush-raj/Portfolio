@@ -38,8 +38,8 @@ export function CertificationsSection() {
                     {hasCertificateLink ? (
                       <Link
                         href={certification.href}
-                        target={certificateExternal ? "_blank" : undefined}
-                        rel={certificateExternal ? "noreferrer" : undefined}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--surface-soft)] px-4 py-2 text-sm font-medium text-[var(--foreground)] transition duration-200 hover:-translate-y-0.5 hover:border-[var(--line-strong)] hover:bg-[var(--surface-muted)]"
                       >
                         {certification.linkLabel ?? "View Certificate"}

@@ -31,14 +31,37 @@ export default function ResumePage() {
                 description="A concise summary of education, project-led experience, technical strengths, and measurable outcomes."
               />
             </div>
-            <Link
-              href="/resume.pdf"
-              download
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--accent)] px-6 py-3.5 font-semibold text-slate-950 transition hover:bg-[var(--accent-strong)]"
-            >
-              <Download size={18} />
-              Download Resume PDF
-            </Link>
+            <div className="flex flex-wrap gap-3">
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-[var(--accent)] bg-transparent px-6 py-3.5 font-semibold text-[var(--accent)] transition hover:bg-[var(--accent)] hover:text-slate-950"
+              >
+                <Download size={18} />
+                Open CV (View)
+              </a>
+
+              <a
+                href="/resume.pdf"
+                download
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--accent)] px-6 py-3.5 font-semibold text-slate-950 transition hover:bg-[var(--accent-strong)]"
+              >
+                <Download size={18} />
+                Download Resume PDF
+              </a>
+            </div>
+          </div>
+
+          <div className="panel rounded-[1.5rem] border border-[var(--line)] p-5">
+            <h3 className="mb-3 font-[family-name:var(--font-heading)] text-lg font-semibold text-[var(--foreground)]">Embedded CV Preview</h3>
+            <p className="mb-4 text-sm text-[var(--muted)]">Your resume PDF is shown below. Use the buttons above to open/download in a new tab.</p>
+            <div className="overflow-hidden rounded-xl border border-[var(--line)]">
+              <iframe src="/resume.pdf" className="h-[70vh] w-full" title="Resume PDF">
+                Your browser does not support iframes. Click
+                <a href="/resume.pdf">here to download the resume</a>.
+              </iframe>
+            </div>
           </div>
 
           <div className="grid gap-4 md:grid-cols-4">
@@ -110,6 +133,16 @@ export default function ResumePage() {
                     <h3 className="text-lg font-semibold text-[var(--foreground)]">{item.title}</h3>
                     <p className="mt-1 text-sm text-[var(--foreground)]/80">{item.issuer}</p>
                     <p className="mt-3 text-sm leading-7 text-[var(--muted)]">{item.note}</p>
+                    {item.href && item.href !== "#" ? (
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-3 inline-flex items-center gap-2 rounded-full border border-[var(--line)] px-4 py-2 text-sm font-medium text-[var(--foreground)] hover:bg-[var(--surface-soft)]"
+                      >
+                        {item.linkLabel ?? "View Certificate"}
+                      </a>
+                    ) : null}
                   </div>
                 ))}
               </div>
