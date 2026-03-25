@@ -112,7 +112,8 @@ export const education = educationData.items.map((item) => ({
 
 export const contactSection = {
   sectionHeading: contactData.sectionHeading,
-  primaryEmail: contactData.primaryEmail
+  primaryEmail: contactData.primaryEmail,
+  primaryPhone: contactData.primaryPhone
 };
 export const contactLinks = contactData.links;
 

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowUpRight, Github, Linkedin, Mail, Phone } from "lucide-react";
 
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -10,7 +10,8 @@ export function ContactSection() {
   const iconMap = {
     GitHub: Github,
     LinkedIn: Linkedin,
-    Email: Mail
+    Email: Mail,
+    Phone: Phone
   } as const;
 
   return (
@@ -25,13 +26,23 @@ export function ContactSection() {
             />
 
             <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-              <Link
-                href={`mailto:${contactSection.primaryEmail}`}
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--accent)] px-6 py-3.5 font-semibold text-slate-950 transition duration-200 hover:-translate-y-0.5 hover:bg-[var(--accent-strong)] hover:shadow-[0_0_24px_rgba(167,243,208,0.3)]"
-              >
-                <Mail size={18} />
-                {contactSection.primaryEmail}
-              </Link>
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+                {/* <Link
+                  href={`mailto:${contactSection.primaryEmail}`}
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--accent)] px-6 py-3.5 font-semibold text-slate-950 transition duration-200 hover:-translate-y-0.5 hover:bg-[var(--accent-strong)] hover:shadow-[0_0_24px_rgba(167,243,208,0.3)]"
+                >
+                  <Mail size={18} />
+                  {contactSection.primaryEmail}
+                </Link>
+
+                <Link
+                  href={`tel:${contactSection.primaryPhone}`}
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--accent)] px-6 py-3.5 font-semibold text-slate-950 transition duration-200 hover:-translate-y-0.5 hover:bg-[var(--accent-strong)] hover:shadow-[0_0_24px_rgba(167,243,208,0.3)]"
+                >
+                  <Phone size={18} />
+                  {contactSection.primaryPhone}
+                </Link> */}
+              </div>
 
               <div className="flex flex-wrap gap-3">
                 {contactLinks.map((link) => {
